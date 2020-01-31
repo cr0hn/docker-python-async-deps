@@ -6,4 +6,4 @@ RUN apk update && \
     apk --no-cache --update add python py-pip openssl ca-certificates
 
 RUN pip install -U pip && \
-    pip install uvloop sanic aioredis sanic_envconfig aio-pika aiohttp
+    pip install uvloop sanic aioredis sanic_envconfig aio-pika aiohttp aiodocker

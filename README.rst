@@ -24,6 +24,7 @@ This Docker contains these dependencies:
 - sanic_envconfig
 - aio-pika
 - aiohttp
+- aiodocker
 
 Usage
 -----
