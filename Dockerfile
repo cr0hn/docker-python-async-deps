@@ -1,11 +1,11 @@
 FROM python:3.8-alpine as base
 
-FROM base as builder
-
 RUN apk update && \
     apk upgrade && \
     apk add --no-cache build-base git && \
     apk --no-cache --update add python py-pip openssl ca-certificates bash
+
+FROM base as builder
 
 RUN mkdir /install
 RUN pip install --no-cache-dir -U pip && \
