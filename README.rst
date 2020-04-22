@@ -15,6 +15,9 @@ This Docker contains these dependencies:
 - build-base (Core development and building tools)
 - git
 - pip 20.x
+- openssl
+- ca-certificates
+- bash
 
 **Python**
 
@@ -25,6 +28,7 @@ This Docker contains these dependencies:
 - aio-pika
 - aiohttp
 - aiodocker
+- cryptography
 
 Usage
 -----
