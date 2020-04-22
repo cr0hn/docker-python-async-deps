@@ -14,6 +14,3 @@ RUN pip install --no-cache-dir -U pip && \
 FROM base
 COPY --from=builder /root/wheels /root/wheels
 RUN pip install --no-cache --no-index --find-links=/root/wheels uvloop sanic aioredis sanic_envconfig aio-pika aiohttp aiodocker cryptography
-
-# Clean caches
-RUN rm -rf /root/wheels /var/cache/apk/ && find . | grep -E "(__pycache__|\.pyc$|\.pyo$)" | xargs rm -rf
