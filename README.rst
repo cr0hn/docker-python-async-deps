@@ -29,6 +29,7 @@ This Docker contains these dependencies:
 - aiohttp
 - aiodocker
 - cryptography
+- lxml
 
 Usage
 -----
