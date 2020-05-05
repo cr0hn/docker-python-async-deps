@@ -14,4 +14,3 @@ RUN pip install --no-cache-dir -U pip && \
 FROM base
 COPY --from=builder /root/wheels /root/wheels
 RUN pip install --no-cache --no-index --find-links=/root/wheels uvloop sanic aioredis sanic_envconfig aio-pika aiohttp aiodocker cryptography lxml
-RUN rm -rf /root/wheels
