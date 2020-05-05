@@ -13,4 +13,12 @@ RUN pip install --no-cache-dir -U pip && \
 
 FROM base
 COPY --from=builder /root/wheels /root/wheels
+
+# lxml binary dependencies
+COPY --from=builder /usr/lib/libxslt.so.1 /usr/lib/libxslt.so.1
+COPY --from=builder /usr/lib/libexslt.so.0 /usr/lib/libexslt.so.0
+COPY --from=builder /usr/lib/libxml2.so.2 /usr/lib/libxml2.so.2
+COPY --from=builder /usr/lib/libgcrypt.so.20 /usr/lib/libgcrypt.so.20
+COPY --from=builder /usr/lib/libgpg-error.so.0 /usr/lib/libgpg-error.so.0
+
 RUN pip install --no-cache --no-index --find-links=/root/wheels uvloop sanic aioredis sanic_envconfig aio-pika aiohttp aiodocker cryptography lxml
