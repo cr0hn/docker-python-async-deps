@@ -18,6 +18,7 @@ This Docker contains these dependencies:
 - openssl
 - ca-certificates
 - bash
+- mc (MinIO client)
 
 **Python**
 
